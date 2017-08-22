@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        * { margin: 0; padding: 0; border: none; }
+
+body {
+	background-color: rgb(242,242,242);
+
+      margin: 0;
+      padding:0;
+    
+}
+
+
+.principal {
+	width           : 70%;
+	height          : 900px;
+	background-color: rgba(255,255,255,1);
+	margin          : 0 auto;
+
+    
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.menu {
+     animation: 1s ease-out 0s 1 slideInFromLeft;
+    top: 0;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:0px;
+    padding: 0px;
+	width             : 100%;
+	height            : 50px;	
+	position          : fixed;
+	overflow          : hidden;
+	box-sizing        : border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing   : border-box;
+
+}
+
+.menu ul {
+    list-style-type : none;
+    margin          : 0;
+    padding         : 0;
+    background-color  : rgba(119,119,119,0.95);
+    height          : 100%;
+    
+    overflow        : hidden;
+}
+
+.menu li {
+    float : left;
+    height: 100%;
+    width : 25%;
+}
+
+.menu li div {
+    display           : block;
+    color             : white;
+    text-align        : center;
+    padding           : 10px;
+    height            : 100%;
+    width             : 100%;
+   	font-size         : 25px; 
+   	font-weight       : bold;
+   	font-family       : Arial;
+
+    box-sizing        : border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing   : border-box;
+
+    
+    
+}
+
+.menu li div:hover {
+    background-color: rgb(176,176,176);
+    transition      : 0.4s;
+    border-radius   : 0px;
+    
+}
+
+.menu li a {
+	text-decoration: none;
+	color: white;
+}
+
+input{
+    border: 1px solid;
+}
+        </style>
+        <script>
+           function borra() {
+                var result = confirm("Desea borrar este cliente?");
+                if (result === true) {
+                    document.getElementById("borrar").submit();
+                    alert("Borrado exitoso");
+                }
+                else
+                    alert("no se borra");
+            }
+        </script>
+    </head>
+    <body>
+        <form id="borrar" action="borrar.jsp"><div class="menu">
+			<ul>
+				<li><a href="index.html"><div>Inicio</div></a></li>
+				<li><a href="secci.html"><div>Usuario</div></a></li>
+				<li><a href="rps.html"><div>Juego</div></a></li>
+				<li><a href="Consultas.html"><div>Consultas</div></a></li>
+			</ul>
+		</div>
+        <div class="principal">
+            <div style="height: 70px"></div><div style="margin:  0 auto; margin-left: 30%; font-family: Arial; font-size: 1.5em;">
+            Nombre del usuario al que desea  borrar:<br>
+            <input type="text" name="nombre" style="width: 60%; height: 30px;"><br>
+            <input type="button" onclick="borra();" value="Confirmar" style="width: 20%; height: 30px;">
+            </div></div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yo yo titties</title>
+	<link rel="stylesheet" type="text/css" href="formucss.css">
+	<script type="text/javascript" src="formujs.js"></script>
+</head>
+<body onload="fdatos.reset();">
+    <div class="menu">
+		<ul>
+			<li><a href="index.html"><div>Inicio</div></a></li>
+			<li><a href="secci.html"><div>Usuario</div></a></li>
+			<li><a href="rps.html"><div>Juego</div></a></li>
+			<li><a href="Consultas.html"><div>Consultas</div></a></li>
+		</ul>
+	</div>
+<div class="principal">
+    <div style="height: 50px;"></div>
+    <form name="fdatos" action="alta.jsp">
+	
+	<br>
+	<div class="formulario">
+		Nombre:<br>
+                <input type="text" id="nombre" name="nombree" placeholder="Nombre(s), Apellido Paterno, Apellido Materno" 
+                       style="width: 290px;" onkeypress="return soloLetras(event)"><br>
+		<br>
+		Contrase&ntilde;a:<br>
+		<input type="text" id="pass" name="contrasena" placeholder="Ingrese su Contrase&ntilde;a" onkeypress="return soloNums(event)" maxlength="4"><br>
+		<br>
+		Domicilio:<br>
+		<input type="text" id="domicilio" name="domizzi" style="width: 290px;" placeholder="Calle, num. exterior, num. interior"><br>
+		<br>
+		Delegaci&oacute;n:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Colonia:<br>
+		<select name="delegacion" id="deleg" onchange="selec(this.value);">
+			<option value="0">Seleccione una Delegacion</option>
+			<option value="Azcapotzalco">Azcapotzalco</option>
+			<option value="Gustavo A. Madero">Gustavo A. Madero</option>
+		</select>
+		&nbsp;&nbsp; &nbsp;
+		<select name="colonia" id="coli">
+				<option>Seleccione una Colonia</option>
+		</select><br><br>
+		Correo:<br>
+                <input type="email" name="correo" placeholder="algo@mail.com" id="email"><br><br>
+		Tel&eacute;fono:<br>
+                <input type="text" name="fono" id="phone" placeholder="Ingrese su telefono" maxlength="10"><br>
+		<br>
+		Sexo:<br>
+		&nbsp;
+			<span id="wot">
+			Masculino<input type="radio" name="sexo" value="masculino" >&nbsp;&nbsp;&nbsp;&nbsp;
+			Femenino<input type="radio" name="sexo" value="femenino" >
+			</span>
+			<br><br>
+
+
+		<br><br>
+                <input type="button" value="Guardar" onclick="validar();" style="height: 30px; width: 200px;">
+		&nbsp;&nbsp;
+		<input type="submit" value="Enviar" disabled id="popo" style="height: 30px; width: 200px;">
+	</div>
+</form>
+</div>
+
+</body>
+</html>

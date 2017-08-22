@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+	<link rel="stylesheet" type="text/css" href="rps.css">
+	<script type="text/javascript" src="rps.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html"><div>Inicio</div></a></li>
+            <li><a href="secci.html"><div>Usuario</div></a></li>
+            <li><a href="rps.html"><div>Juego</div></a></li>
+            <li><a href="Consultas.html"><div>Consultas</div></a></li>
+	</ul>
+		</div>
+<div class="princ">
+    <div style="height: 70px;"></div>
+	<center>
+	<form name="fdatos">
+		<div class="choose" id="elecc">
+			<center>
+			<span>Elige<br> Piedra, Papel o Tijera</span><br>
+			<img src="rockblue.png" id="rock" onclick="khe(rock);">
+			<img src="paperblue.png" id="paper" onclick="khe(paper);">
+			<img src="scissorsblue.png" id="scissors" onclick="khe(scissors);">
+			</center>
+		</div>
+		<br><br><br>
+		<div class="wut" id="ress">
+			<div class="combat" id="combate"></div>
+			<div class="versus" id="versus0"></div>
+		</div>
+		<div class="aviso">
+			
+		</div>
+		<div class="wut2" id="final">
+			<span id="resultado"></span>
+			<br>
+			<input type="button" value="Intentarlo de Nuevo" onclick="location.reload();">
+		</div>
+	</form>
+	</center>
+</div>
+</body>
+</html>

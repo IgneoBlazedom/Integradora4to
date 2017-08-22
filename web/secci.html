@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicia Sesion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="secssion.css">
+        <style>
+            .forms {
+                margin: 0 auto;
+                width: 70%;
+                padding: 5px;
+                font-size: 30px;
+            }
+
+            
+            #imagenlogo{
+                width: 30%; 
+                height: 20%;
+                padding-top: 0; 
+                border-radius:100%;
+            }
+            input[type=text],[type=password]{
+                width: 60%;
+                padding: 12px 15px;
+                margin: 10px auto;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-family: Arial;
+            }
+
+            input[type=submit] {
+                width: 25%;
+                background: rgb(191, 144, 0);
+                color: white;
+                padding: 10px 15px;
+                margin: 10px auto;;
+                cursor: pointer;
+                font-family: Arial;
+                font-size: 20px;
+                border-radius: 4px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-color: rgb(191, 144, 0);
+                text-align: center;
+            }
+            @media only screen and (max-width: 919px){
+
+                input[type=submit]{
+                    width: 50%;
+                    display: inline-block;
+                }
+            }
+            @media only screen and (max-width: 681px){
+                input[type=submit]{
+                    display: inline-block;
+                    width: 50%;
+                }
+            }
+            @media only screen and (max-width: 327px){
+                input[type=submit]{
+                    display: inline-block;
+                    font-size: 15px;
+                    width: 60%;
+                }
+            }
+            @media only screen and (max-width: 919px){
+                #imagenlogo{
+                    width: 50%; 
+                    height: 40%;
+                    margin-top: 10px; 
+                }
+            }
+            @media only screen and (max-width: 524px){
+                input[type=text],[type=password]{
+                    width: 85%;
+                }
+                #imagenlogo{
+                    width: 60%; 
+                    height: 50%;
+                    margin-top: 10px; 
+                }
+            }
+            @media only screen and (max-width: 413px){
+                input[type=text],[type=password]{
+                    width: 95%;
+                    font-size: 10px;
+                }
+                #imagenlogo{
+                    width: 80%; 
+                    height: 70%;
+                    margin-top: 10px; 
+                }
+            }
+        </style>
+        <script>
+
+            function llenado() {
+                var nom = document.getElementById("nombre");
+                var con = document.getElementById("contra");
+                if (nom.value === "") {
+                    alert("Debes ingresar tu nombre de usuario para ingresar");
+                    nom.focus();
+                } else
+                if (con.value === "") {
+                    alert("Debes ingresar tu contraseña para ingresar");
+                    con.focus();
+                } else {
+                    document.location = "pages/PerfilAlumno.html";
+                }
+                if (nom.value === "ubaldarito" && con.value === "123") {
+                    document.location = "pages/sesionadministrador.html";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+		<ul>
+			<li><a href="index.html"><div>Inicio</div></a></li>
+			<li><a href="secci.html"><div>Usuario</div></a></li>
+			<li><a href="rps.html"><div>Juego</div></a></li>
+			<li><a href="Consultas.html"><div>Consultas</div></a></li>
+		</ul>
+	</div>
+        <div class="principal">
+             <div style="height: 70px;"></div>
+             <form id="form" action="sesion.jsp" method="post">
+                <div class="forms">
+                    <center>
+                        <img id="imagenlogo" src="boognish2.png" alt="woop woop"><br>
+                        <span style="font-size: 2em; font-family: arial;">Iniciar sesi&oacute;n</span>
+                        <br><span style="font-size:20px;">Inicia sesión para acceder a funciones exclusivas</span>
+                    </center>
+                    <center>
+                        <input maxlength="15" type="text" id="boleta"  name="boleta"  required placeholder="Ingrese su nombre" >
+                        <input  type="password" name="contrasenia" required id="contra" placeholder="Ingrese contrase&ntilde;a">
+                    </center>
+                    <center>
+                        <input type="submit" value="Aceptar" name="finalizar" onclick="llenado();">
+                    </center>
+                    <center>
+                        <p style="font-size: 19px; font-family: arial"> 
+                            ¿No estás registrado?
+                            <a href="formulario.html">Da click aqu&iacute;</a>
+                        </p>
+                    </center>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

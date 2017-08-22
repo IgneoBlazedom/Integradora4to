@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consulta Individual</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        * { margin: 0; padding: 0; border: none; }
+
+body {
+	background-color: rgb(242,242,242);
+
+      margin: 0;
+      padding:0;
+    
+}
+
+
+.principal {
+	width           : 70%;
+	height          : 900px;
+	background-color: rgba(255,255,255,1);
+	margin          : 0 auto;
+
+    
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.menu {
+     animation: 1s ease-out 0s 1 slideInFromLeft;
+    top: 0;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:0px;
+    padding: 0px;
+	width             : 100%;
+	height            : 50px;	
+	position          : fixed;
+	overflow          : hidden;
+	box-sizing        : border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing   : border-box;
+
+}
+
+.menu ul {
+    list-style-type : none;
+    margin          : 0;
+    padding         : 0;
+    background-color  : rgba(119,119,119,0.95);
+    height          : 100%;
+    
+    overflow        : hidden;
+}
+
+.menu li {
+    float : left;
+    height: 100%;
+    width : 25%;
+}
+
+.menu li div {
+    display           : block;
+    color             : white;
+    text-align        : center;
+    padding           : 10px;
+    height            : 100%;
+    width             : 100%;
+   	font-size         : 25px; 
+   	font-weight       : bold;
+   	font-family       : Arial;
+
+    box-sizing        : border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing   : border-box;
+
+    
+    
+}
+
+.menu li div:hover {
+    background-color: rgb(176,176,176);
+    transition      : 0.4s;
+    border-radius   : 0px;
+    
+}
+
+.menu li a {
+	text-decoration: none;
+	color: white;
+}
+
+input{
+    border: 1px solid;
+    
+}
+span{
+    font-family: arial;
+    font-size: 1.5em;
+}
+        </style>
+    </head>
+    <body>
+        <form action="consultuno.jsp">
+            <div class="menu">
+			<ul>
+				<li><a href="index.html"><div>Inicio</div></a></li>
+				<li><a href="secci.html"><div>Usuario</div></a></li>
+				<li><a href="rps.html"><div>Juego</div></a></li>
+				<li><a href="Consultas.html"><div>Consultas</div></a></li>
+			</ul>
+		</div>
+        <div class="principal">
+            <div style="height: 70px"></div><center>
+            <span>Ingresa el nombre del registro a encontrar:</span><br>
+            <input type="text" name="nombre" style="width: 60%; height: 30px;"> &nbsp;<br>
+            <input type="submit" value="Buscar" style="width: 20%; height: 30px;"></center>
+        </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .img:hover{
+                position: absolute;
+                top: 150px;
+                left: 150px;
+                -webkit-transition: all .3s ease-in;
+                -moz-transition: all .3s ease-in;
+                -ms-transition: all .3s ease-in;
+                -o-transition: all .3s ease-in;
+                transition: all .3s ease-in;
+                transform: scale(2);
+                -ms-transform: scale(2);
+                -webkit-transform: scale(2); 
+            }
+            .img{
+                position:absolute;
+                top:70px;
+                left: 70px;
+                transform: scale(1);
+                -ms-transform: scale(1);
+                -webkit-transform: scale(1); 
+                -webkit-transition: all .3s ease-in;
+                -moz-transition: all .3s ease-in;
+                -ms-transition: all .3s ease-in;
+                -o-transition: all .3s ease-in;
+                transition: all .3s ease-in;
+                
+            
+            }
+        </style>
+        <script>
+            function woop(){
+                var dir = document.getElementById('test').value;
+                
+                if (dir == ""||dir==" ") {
+   alert("no has colocado una URL");
+   return false;
+}
+document.getElementById('imagen').innerHTML="<img src="+dir+" class='img' width='200' height='150'>";
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+        <div style="font-family: Arial;">
+            Inserta la URL de la imagen que quieres expandir <br>(necesita conexión a internet)<br>
+        <input type="text" placeholder="URL" id="test">
+        <input type="button" value="confirmar" onclick="woop();">          
+        <input value="Regresar" type="button" style="width: 70px;" onclick="document.location='http://localhost:8080/WebApplication1/Perfil.jsp'">
+<br>
+            <span id="imagen"></span>
+
+           
+        </div>
+    </center>
+    </body>
+</html>
